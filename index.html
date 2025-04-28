@@ -1,594 +1,147 @@
-html : 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earth Store - Eco Friendly Products</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">Earth Store</div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#" class="cart-link">Cart <span class="cart-count">0</span></a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn">☰</button>
-        </div>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Eco Friendly Products</h1>
-            <p>Discover our sustainable and environmentally friendly products that help you reduce your carbon footprint while enjoying high-quality items.</p>
-            <a href="#" class="btn">Shop Now</a>
-        </div>
-    </section>
-    
-    <!-- Featured Products -->
-    <section class="featured">
-        <div class="container">
-            <h2 class="section-title">Featured Products</h2>
-            <div class="products-grid">
-                <!-- Products will be loaded dynamically via JavaScript -->
-            </div>
-        </div>
-    </section>
-    
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">Our Mission</h2>
-                <p>We are committed to providing sustainable alternatives to everyday products. Our goal is to make it easy for everyone to reduce their environmental impact without sacrificing quality or convenience.</p>
-                <p>All our products are sourced from ethical suppliers and made from natural, biodegradable, or recycled materials.</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Newsletter -->
-    <section class="newsletter">
-        <div class="container">
-            <h2 class="section-title">Stay Updated</h2>
-            <p>Subscribe to our newsletter for the latest eco-friendly products and tips on sustainable living.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your email address" required>
-                <button type="submit">Subscribe</button>
-                <div class="newsletter-message"></div>
-            </form>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>Shop</h3>
-                    <ul>
-                        <li><a href="#">All Products</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Best Sellers</a></li>
-                        <li><a href="#">Special Offers</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Information</h3>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Sustainability</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Returns & Refunds</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Customer Service</h3>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Pinterest</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; <span class="current-year"></span> Earth Store. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
-
-css : 
-
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    color: #333;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Header Styles */
-header {
-    background-color: #f8f8f8;
-    padding: 20px 0;
-    border-bottom: 1px solid #e1e1e1;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #2a7d2e;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-.cart-count {
-    background-color: #2a7d2e;
-    color: white;
-    padding: 2px 6px;
-    border-radius: 50%;
-    font-size: 12px;
-}
-
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
-    background-color: #f0f4f0;
-    padding: 80px 0;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #2a7d2e;
-}
-
-.hero p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: 0 auto 30px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #2a7d2e;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #1e5a21;
-}
-
-/* Featured Products */
-.featured {
-    padding: 60px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
-    color: #2a7d2e;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.product-card {
-    border: 1px solid #e1e1e1;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.product-image-placeholder {
-    height: 200px;
-    background-color: #f0f4f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-}
-
-.product-info {
-    padding: 20px;
-}
-
-.product-title {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.product-price {
-    font-weight: bold;
-    color: #2a7d2e;
-    margin-bottom: 15px;
-}
-
-.add-to-cart {
-    display: inline-block;
-    background-color: #2a7d2e;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.add-to-cart:hover {
-    background-color: #1e5a21;
-}
-
-/* About Section */
-.about {
-    background-color: #f8f8f8;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Newsletter */
-.newsletter {
-    padding: 60px 0;
-    text-align: center;
-    background-color: #f0f4f0;
-}
-
-.newsletter-form {
-    max-width: 500px;
-    margin: 20px auto 0;
-    display: flex;
-    position: relative;
-}
-
-.newsletter-form input {
-    flex: 1;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px 0 0 4px;
-    border-right: none;
-}
-
-.newsletter-form button {
-    padding: 12px 20px;
-    background-color: #2a7d2e;
-    color: white;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-}
-
-.newsletter-message {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;
-}
-
-/* Footer */
-footer {
-    background-color: #2a2a2a;
-    color: #fff;
-    padding: 60px 0 20px;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-.footer-column h3 {
-    margin-bottom: 20px;
-    font-size: 18px;
-}
-
-.footer-column ul li {
-    margin-bottom: 10px;
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #444;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    nav {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        width: 80%;
-        height: calc(100vh - 80px);
-        background-color: #f8f8f8;
-        transition: left 0.3s;
-        padding: 20px;
-    }
-
-    nav.active {
-        left: 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 15px 0;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-    }
-
-    .newsletter-form input,
-    .newsletter-form button {
-        width: 100%;
-        border-radius: 4px;
-    }
-
-    .newsletter-form button {
-        margin-top: 10px;
-    }
-}
-
-js :
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Set current year in footer
-    document.querySelector('.current-year').textContent = new Date().getFullYear();
-
-    // Mobile menu toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const nav = document.querySelector('nav');
-    
-    mobileMenuBtn.addEventListener('click', function() {
-        nav.classList.toggle('active');
-    });
-
-    // Product data
-    const products = [
-        {
-            id: 1,
-            name: "Bamboo Toothbrush",
-            price: 9.99,
-            description: "Biodegradable bamboo handle with soft bristles"
-        },
-        {
-            id: 2,
-            name: "Reusable Shopping Bag",
-            price: 14.99,
-            description: "Durable organic cotton shopping bag"
-        },
-        {
-            id: 3,
-            name: "Organic Cotton Tote",
-            price: 19.99,
-            description: "Stylish and sustainable tote bag"
-        },
-        {
-            id: 4,
-            name: "Stainless Steel Straw Set",
-            price: 12.99,
-            description: "Set of 4 stainless steel straws with cleaner"
-        },
-        {
-            id: 5,
-            name: "Beeswax Food Wraps",
-            price: 15.99,
-            description: "Eco-friendly alternative to plastic wrap"
-        },
-        {
-            id: 6,
-            name: "Wooden Hairbrush",
-            price: 22.99,
-            description: "Handcrafted wooden hairbrush"
-        },
-        {
-            id: 7,
-            name: "Reusable Water Bottle",
-            price: 24.99,
-            description: "Stainless steel insulated bottle"
-        },
-        {
-            id: 8,
-            name: "Bamboo Cutlery Set",
-            price: 11.99,
-            description: "Portable bamboo utensil set"
-        }
-    ];
-
-    // Render products
-    const productsGrid = document.querySelector('.products-grid');
-    
-    function renderProducts() {
-        productsGrid.innerHTML = '';
-        products.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card';
-            productCard.innerHTML = `
-                <div class="product-image-placeholder">${product.name}</div>
-                <div class="product-info">
-                    <h3 class="product-title">${product.name}</h3>
-                    <p class="product-description">${product.description}</p>
-                    <div class="product-price">$${product.price.toFixed(2)}</div>
-                    <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
-                </div>
-            `;
-            productsGrid.appendChild(productCard);
-        });
-    }
-
-    renderProducts();
-
-    // Cart functionality
-    let cart = [];
-    
-    function updateCartCount() {
-        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-        document.querySelector('.cart-count').textContent = totalItems;
-    }
-
-    // Add to cart
-    document.addEventListener('click', function(e) {
-        if (e.target.classList.contains('add-to-cart')) {
-            const productId = parseInt(e.target.getAttribute('data-id'));
-            const product = products.find(p => p.id === productId);
-            
-            const existingItem = cart.find(item => item.id === productId);
-            if (existingItem) {
-                existingItem.quantity++;
-            } else {
-                cart.push({
-                    id: product.id,
-                    name: product.name,
-                    price: product.price,
-                    quantity: 1
-                });
-            }
-            
-            updateCartCount();
-            
-            // Show feedback
-            e.target.textContent = 'Added!';
-            setTimeout(() => {
-                e.target.textContent = 'Add to Cart';
-            }, 1000);
-        }
-    });
-
-    // Newsletter form
-    const newsletterForm = document.querySelector('.newsletter-form');
-    const newsletterMessage = document.querySelector('.newsletter-message');
-    
-    newsletterForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = this.querySelector('input').value;
-        
-        // Simulate submission
-        newsletterMessage.textContent = 'Thank you for subscribing!';
-        newsletterMessage.style.color = '#2a7d2e';
-        this.reset();
-        
-        setTimeout(() => {
-            newsletterMessage.textContent = '';
-        }, 3000);
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
+<!DOCTYPE HTML>
+ 
+ <html>
+ 	<head>
+ 		<title>Roboți pentru succes</title>
+ 		<meta charset="utf-8" />
+ 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+ 		<meta name="description" content="" />
+ 		<meta name="keywords" content="" />
+ 		<link rel="stylesheet" href="assets/css/main.css" />
+ 	</head>
+ 	<body class="is-preload">
+ 
+ 		<!-- Wrapper -->
+ 			<div id="wrapper">
+ 
+ 				<!-- Intro -->
+ 					<section class="intro">
+ 						<header>
+ 							<h1>Roboți pentru succes</h1>
+ 							<p>Viitorul automatizarii e azi.</p>
+ 							<ul class="actions">
+ 								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+ 							</ul>
+ 						</header>
+ 						<div class="content">
+ 							<span class="image fill" data-position="center"><img src="images/pic01.jpg" alt="" /></span>
+ 						</div>
+ 					</section>
+ 
+ 				<!-- Section -->
+ 					<section id="first">
+ 						<header>
+ 							<h2>Introducere</h2>
+ 						</header>
+ 						<div class="content">
+ 							<p>La <strong>Roboți pentru succes</strong>, ne dedicăm să transformăm modul în care companiile își desfășoară activitatea, oferind tehnologii avansate de automatizare prin roboți industriali. Indiferent de domeniul în care activați – producție, logistică, sau asamblare – avem soluția potrivită pentru a vă crește productivitatea și a reduce costurile operaționale.</p>
+ 							<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+ 						</div>
+ 					</section>
+ 
+ 				<!-- Section -->
+ 					<section>
+ 						<header>
+ 							<h2>De ce să alegeți roboții noștri industriali?</h2>
+ 						</header>
+ 						<div class="content">
+ 							
+ 							<ul class="feature-icons">
+ 								<li class="icon solid fa-laptop">Eficiență ridicată: Creșteți viteza proceselor și reduceți timpii morți.</li>
+ 								<li class="icon solid fa-bolt">Flexibilitate: Roboții noștri se adaptează ușor la diferite aplicații, de la sudură și manipulare până la ambalare și paletizare.</li>
+ 								<li class="icon solid fa-signal">Calitate constantă: Eliminați erorile umane și asigurați o precizie impecabilă în producție.</li>
+ 								<li class="icon solid fa-cog">Costuri optimizate: Automatizarea reduce semnificativ cheltuielile legate de forța de muncă și întreținere.</li>
+ 								<li class="icon solid fa-map-marker-alt">Sustenabilitate: Soluțiile noastre sunt proiectate pentru a economisi energie și resurse, contribuind la un viitor mai verde.</li>
+ 					
+ 							</ul>
+ 							
+ 						</div>
+ 					</section>
+ 
+ 				<!-- Section -->
+ 					<section>
+ 						<header>
+ 							<h2>Produsele și serviciile noastre</h2>
+ 						</header>
+ 						<div class="content">
+ 							<ul>
+ 								<li >Roboți colaborativi (Cobots): Soluții ideale pentru lucrul în siguranță alături de operatori umani.</li>
+ 								<li >Roboți industriali pentru sarcini grele: Perfecți pentru operațiuni complexe sau de mare intensitate.</li>
+ 								<li >Automatizări personalizate: Integrarea roboților în linia dvs. de producție pentru a satisface nevoile specifice.</li>
+ 								<li >Service și mentenanță: Asistență completă pentru instalare, întreținere și optimizarea performanțelor.</li>
+ 					
+ 							</ul>
+ 							
+ 
+ 							
+ 						
+ 			
+ 					
+ 
+ 			
+ 					<section>
+ 						<header>
+ 							<h2>Contactează-ne</h2>
+ 						</header>
+ 						<div class="content">
+ 							
+ 							<form>
+ 								<div class="fields">
+ 									<div class="field half">
+ 										<input type="text" name="name" id="name" placeholder="Name" />
+ 									</div>
+ 									<div class="field half">
+ 										<input type="email" name="email" id="email" placeholder="Email" />
+ 									</div>
+ 									<div class="field">
+ 										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+ 									</div>
+ 								</div>
+ 								<ul class="actions">
+ 									<li><input type="submit" value="Send Message" class="button primary" /></li>
+ 								</ul>
+ 							</form>
+ 						</div>
+ 						<footer>
+ 							<ul class="items">
+ 								<li>
+ 									<h3>Email</h3>
+ 									<a href="#">office@robotipentrusucces.ro</a>
+ 								</li>
+ 								<li>
+ 									<h3>Phone</h3>
+ 									<a href="#">074218492</a>
+ 								</li>
+ 								<li>
+ 									<h3>Adresa</h3>
+ 									<span>Strada Gh. Sincai nr.35, Baia Mare, Romania</span>
+ 								</li>
+ 								<li>
+ 									
+ 									<ul class="icons">
+ 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+ 										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+ 										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+ 										<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+ 						
+ 									</ul>
+ 								</li>
+ 							</ul>
+ 						</footer>
+ 					</section>
+ 
+ 				<!-- Copyright -->
+ 					<div class="copyright">&copy; Sigma Boss</div>
+ 
+ 			</div>
+ 
+ 		<!-- Scripts -->
+ 			<script src="assets/js/jquery.min.js"></script>
+ 			<script src="assets/js/jquery.scrolly.min.js"></script>
+ 			<script src="assets/js/browser.min.js"></script>
+ 			<script src="assets/js/breakpoints.min.js"></script>
+ 			<script src="assets/js/util.js"></script>
+ 			<script src="assets/js/main.js"></script>
+ 
+ 	</body>
+ </html>
